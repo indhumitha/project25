@@ -1,0 +1,21 @@
+class Drop{
+    constructor(){
+        this.x=random(0,400)
+        this.y=random(0,400)
+    }
+    display(){
+        push()
+        strokeWeight(1)
+        stroke("blue")
+        fill("skyblue")
+        ellipse(this.x,this.y,1,1)
+        pop()
+    }
+    update(){
+        this.y=this.y+5;
+        if(this.y>400){
+            this.x=random(0,400)
+            this.y=random(0,400) 
+        }
+    }
+}
